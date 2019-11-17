@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>E-Faktury</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/style.css"
+          th:href="@{/css/style.css}"/>
+</head>
+<body style="text-align: center">
+<h1>Witaj w serwisie e-Faktury</h1>
+
+<form th:action="@{/login-process}" method="post">
+    <br>
+    <p><label for="inputLogin">Login:</label></p>
+
+    <p><input id="inputLogin" type="text" placeholder="Podaj login"
+           th:required="requaied" name="username"/></p>
+
+    <br>
+    <br>
+    <p><label for="inputPassword" >Password</label></p>
+
+    <p><input type="password" id="inputPassword"
+           th:required="requaied" placeholder="Podaj hasło" name="password"/></p>
+
+    <br>
+    <br>
+    <form action="/rejestracja">
+        <p><button type="submit">Rejestracja</button></p>
+    </form>
+
+
+    <br>
+    <br>
+        <p><button type="submit" >Zaloguj</button></p>
+
+
+</form>
+</body>
+</html>
